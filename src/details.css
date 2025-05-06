@@ -1,0 +1,131 @@
+/* Root container */
+.login-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/public/remainingbackground.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left panel: Text + Form */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Welcome Text */
+.login-text {
+  margin-bottom: 20px;
+}
+
+.login-text h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.login-text p {
+  font-size: 1.1em;
+  color: #cbd5e1;
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #334155;
+  color: white;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #0ea5e9;
+}
+
+/* Right panel: Robo */
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.robo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .left-panel {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .right-panel {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .login-text h1 {
+    font-size: 1.5em;
+  }
+
+  .robo {
+    max-width: 80%;
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .robo {
+    max-width: 600px;
+  }
+}

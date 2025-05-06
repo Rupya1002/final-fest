@@ -1,0 +1,137 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.schedulecontainer {
+ 
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.15);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.circle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #4be0e0;
+}
+
+.circle h2 {
+  color: #4be0e0;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.circle p {
+  font-size: 0.85rem;
+  padding: 0 1rem;
+  opacity: 0.8;
+}
+
+.schedulecontent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.day-heading {
+  font-size: 2rem;
+  color: #4be0e0;
+  margin-bottom: 1rem;
+}
+
+.day-content {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.day-content:hover {
+  transform: scale(1.02);
+}
+
+.left-section, .right-section {
+  width: 45%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.right-section {
+  align-items: flex-end;
+}
+
+.divider {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  height: 80%;
+  width: 2px;
+  background: #ffffff66;
+  border-radius: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .day-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .circle h2 {
+    font-size: 1.2rem;
+  }
+
+  .circle p {
+    font-size: 0.75rem;
+  }
+
+  .day-heading {
+    font-size: 1.5rem;
+  }
+}

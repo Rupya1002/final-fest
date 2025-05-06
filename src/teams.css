@@ -1,0 +1,173 @@
+.team-container {
+  background: url("/public/remainingbackground.png") ;
+  background-size: cover; /* <-- this is key */
+  background-repeat: repeat;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background: linear-gradient(135deg, #1a1a1a, #292929);
+  border-radius: 20px;
+  padding: 20px;
+  width: 230px;
+  height: 320px; /* fixed height */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.team-card:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card-front {
+  background: #111;
+}
+
+.team-card-back {
+  background: #0ff;
+  color: #111;
+  transform: rotateY(180deg);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.team-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.team-card:active {
+  transform: scale(0.98) translateY(2px);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.3);
+  transition: all 0.1s ease;
+}
+
+.team-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00cfff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sparkle effect */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sparkles span {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #00ffffaa, transparent 70%);
+  border-radius: 50%;
+  animation: sparkle 6s infinite ease-in-out;
+  opacity: 0.3;
+}
+
+.sparkles span:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.sparkles span:nth-child(2) {
+  top: 50%;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+.sparkles span:nth-child(3) {
+  top: 80%;
+  left: 30%;
+  animation-delay: 3s;
+}
+.sparkles span:nth-child(4) {
+  top: 20%;
+  left: 70%;
+  animation-delay: 4.5s;
+}
+.sparkles span:nth-child(5) {
+  top: 60%;
+  left: 10%;
+  animation-delay: 6s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0.8) translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.5) translateY(-10px);
+    opacity: 0.4;
+  }
+}

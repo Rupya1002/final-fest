@@ -1,0 +1,85 @@
+/* profile.css */
+
+body {
+  background: url("/public/remainingbackground.png") ;
+  background-size: cover; /* <-- this is key */
+  background-repeat: repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+
+  max-width: 800px;
+  margin: 40px auto;
+   background: url("/public/remainingbackground.png") no-repeat center center;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.profile-header h1 {
+  font-size: 2.5em;
+  color: #00f6ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-content p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #d8d8f0;
+}
+
+.profile-content p span {
+  font-weight: bold;
+  color: #00e0ff;
+}
+.details-button{
+  padding: 10px 20px;
+  margin: 15px 10px 0 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #00f6ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  margin: 15px 10px 0 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #00f6ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-button:hover,
+.details-button:hover {
+  background-color: #00c3cc;
+  transform: scale(1.05);
+}
+
+.name {
+  color: #00f6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name:hover {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+
+.profile-footer {
+  text-align: center;
+  margin-top: 30px;
+}
